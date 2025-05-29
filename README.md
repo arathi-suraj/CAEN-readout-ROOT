@@ -23,5 +23,12 @@ The ROOT TTree has 7 branches and they are as follows:
 6. active_channels (active_channels\[channels]/I)
 7. waveform_data (waveform_data\[channels*num_of_samples]/F)
 
-The waveform_data branch is a flattened array with the following format
-`]`
+The waveform_data branch is a flattened array with the following format (say we have 100 events and 36 channels as an example)
+`[Event0ch0, Event0ch1, ..., Event0ch35, Event1ch0, Event1ch1, ..., Event100ch34, Event100ch35]`
+
+# How do you read data out of the ROOT Tree?
+There are 2 ways! You can either read the data out yourself or use an object of the Event class (as specified in Event_class.py).
+## Doing it yourself
+If you want to read the ROOT Tree yourself, please feel free to do so! If you'd like a quick example, look at tree_read_one_event.py. 
+## Using the Event class
+The Event class has different methods for loading in basic header information, creating a dictionary with the channels linked to their respective waveform data, etc. This will be documented further in the future.
