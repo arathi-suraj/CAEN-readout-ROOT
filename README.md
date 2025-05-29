@@ -21,3 +21,7 @@ The ROOT TTree has 7 branches and they are as follows:
 4. resolution (resolution/I)
 5. num_of_channels (num_of_channels/I)
 6. active_channels (active_channels\[channels]/I)
+7. waveform_data (waveform_data\[channels*num_of_samples]/F)
+
+The waveform_data branch is a flattened array with the following format
+`]`
